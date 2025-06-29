@@ -5,7 +5,11 @@ const path = require("path");
 require("dotenv").config(); // Load environment variables
 
 const app = express();
-
+app.use(cors({
+  origin: '*', // allow all origins
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // optional
+  credentials: true // optional if you're sending cookies
+}));
 // Replace with your MongoDB connection URI
 // const uri = "mongodb://localhost:27017/proffolio"; // Or use process.env.MONGO_URI
 const uri = process.env.MONGO_URI;
