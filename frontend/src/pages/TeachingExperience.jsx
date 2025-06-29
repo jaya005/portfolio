@@ -17,7 +17,7 @@ const TeachingExperience = () => {
 
   const fetchTeachingExperiences = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/experiences");
+      const response = await axios.get("https://portfolio-rsth.onrender.com/experiences");
       setTeachingExperiences(response.data);
       setLoading(false);
     } catch (error) {
@@ -81,7 +81,7 @@ const TeachingExperience = () => {
                   <div className="experience-card h-100">
                     <div className="card-image-container">
                       <img
-                        src={`http://localhost:4000/uploads/${experience.image}`}
+                        src={`https://portfolio-rsth.onrender.com/uploads/${experience.image}`}
                         alt={experience.name}
                         className="experience-image"
                       />
@@ -121,7 +121,7 @@ const TeachingExperience = () => {
               </Modal.Header>
               <Modal.Body>
                 <img
-                  src={`http://localhost:4000/uploads/${selectedExperience.image}`}
+                  src={`https://portfolio-rsth.onrender.com/uploads/${selectedExperience.image}`}
                   alt={selectedExperience.name}
                 />
                 <h5 className="mt-2">{selectedExperience.institute}</h5>

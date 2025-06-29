@@ -18,7 +18,7 @@ const ResearchPapers = () => {
 
   const fetchPapers = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/Papers");
+      const response = await axios.get("https://portfolio-rsth.onrender.com/Papers");
       setPapers(response.data);
       setLoading(false);
     } catch (error) {
@@ -117,7 +117,7 @@ const ResearchPapers = () => {
                   <div className="paper-card">
                     <div className="card-image-container">
                       <img
-                        src={`http://localhost:4000/uploads/${paper.image}`}
+                        src={`https://portfolio-rsth.onrender.com/uploads/${paper.image}`}
                         alt={paper.title}
                       />
                       <div className="card-overlay">
@@ -172,7 +172,7 @@ const ResearchPapers = () => {
               <Modal.Body>
                 <div className="modal-image-container">
                   <img
-                    src={`http://localhost:4000/uploads/${selectedPaper.image}`}
+                    src={`https://portfolio-rsth.onrender.com/uploads/${selectedPaper.image}`}
                     alt={selectedPaper.title}
                   />
                 </div>

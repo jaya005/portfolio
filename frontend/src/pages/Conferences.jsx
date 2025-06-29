@@ -17,7 +17,7 @@ const Conferences = () => {
 
   const fetchConferences = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/conferences");
+      const response = await axios.get("https://portfolio-rsth.onrender.com/conferences");
       setConferences(response.data);
       setLoading(false);
     } catch (error) {
@@ -80,7 +80,7 @@ const Conferences = () => {
                 >
                   <div className="conf-card">
                     <img
-                      src={`http://localhost:4000/uploads/${conf.image}`}
+                      src={`https://portfolio-rsth.onrender.com/uploads/${conf.image}`}
                       alt={conf.title}
                       className="conf-image card-image-container"
                     />
@@ -117,7 +117,7 @@ const Conferences = () => {
               <Modal.Body>
                 <div className="card-image-container">
                 <img
-                  src={`http://localhost:4000/uploads/${selectedConf.image}`}
+                  src={`https://portfolio-rsth.onrender.com/uploads/${selectedConf.image}`}
                   alt={selectedConf.title}
                 />
                 </div>

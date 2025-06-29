@@ -18,7 +18,7 @@ const Achievements = () => {
 
   const fetchAchievements = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/achievements");
+      const response = await axios.get("https://portfolio-rsth.onrender.com/achievements");
       setAchievements(response.data);
       setLoading(false);
     } catch (error) {
@@ -85,7 +85,7 @@ const Achievements = () => {
               <div className="achievement-card">
                 <div className="card-image-container">
                   <img
-                    src={`http://localhost:4000/uploads/${achievement.image}`}
+                    src={`https://portfolio-rsth.onrender.com/uploads/${achievement.image}`}
                     alt={achievement.name}
                     className="card-img-top"
                   />
@@ -123,7 +123,7 @@ const Achievements = () => {
             <Modal.Body className="modal-body">
               <div className="modal-image-container">
                 <img
-                  src={`http://localhost:4000/uploads/${selectedAchievement.image}`}
+                  src={`https://portfolio-rsth.onrender.com/uploads/${selectedAchievement.image}`}
                   alt={selectedAchievement.name}
                   className="modal-image"
                 />

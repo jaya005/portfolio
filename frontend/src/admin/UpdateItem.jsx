@@ -47,7 +47,7 @@ const UpdateItem = () => {
 
     try {
       const response = await axios.get(
-        `http://localhost:4000/${selectedSection}/${encodeURIComponent(
+        `https://portfolio-rsth.onrender.com/${selectedSection}/${encodeURIComponent(
           itemName
         )}`
       );
@@ -81,7 +81,7 @@ const UpdateItem = () => {
       }
 
       await axios.put(
-        `http://localhost:4000/${selectedSection}/update/${encodeURIComponent(itemName)}`,
+        `https://portfolio-rsth.onrender.com/${selectedSection}/update/${encodeURIComponent(itemName)}`,
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
@@ -151,7 +151,7 @@ const UpdateItem = () => {
               <label className="fw-bold">Current Image:</label>
               <div>
                 <img
-                  src={`http://localhost:4000/uploads/${updateData.image}`}
+                  src={`https://portfolio-rsth.onrender.com/uploads/${updateData.image}`}
                   alt="Current"
                   className="img-thumbnail mt-2"
                   style={{ maxWidth: "200px", maxHeight: "200px" }}

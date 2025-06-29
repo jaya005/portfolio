@@ -19,7 +19,7 @@ const Blog = () => {
 
   const fetchBlogs = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/blogs");
+      const response = await axios.get("https://portfolio-rsth.onrender.com/blogs");
       setBlogs(response.data);
       setLoading(false);
     } catch (error) {
@@ -132,7 +132,7 @@ const Blog = () => {
   className="blog-card"
 >
   <img
-    src={`http://localhost:4000/uploads/${blog.image}`}
+    src={`https://portfolio-rsth.onrender.com/uploads/${blog.image}`}
     alt={blog.title}
     className="blog-image"
   />
@@ -174,7 +174,7 @@ const Blog = () => {
               </Modal.Header>
               <Modal.Body>
                 <img
-                  src={`http://localhost:4000/uploads/${selectedBlog.image}`}
+                  src={`https://portfolio-rsth.onrender.com/uploads/${selectedBlog.image}`}
                   alt={selectedBlog.title}
                   style={{height:"50%"}}
                 />
